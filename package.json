@@ -1,0 +1,30 @@
+{
+  "name": "pi-agent-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "env:gen": "sed 's/=.*/=/' .env > .env.example",
+    "dev": "tsc --noEmit && dotenvx run -- tsx watch src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.22.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^2.23.0",
+    "tsx": "^4.23.13"
+  },
+  "devDependencies": {
+    "@tsconfig/node-lts": "^24.0.1",
+    "@types/node": "^26.4.1",
+    "typescript": "^7.0.2"
+  }
+}
